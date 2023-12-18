@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý đơn thuốc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tiệm Thuốc Bệnh Viện</h1>
+            <button id="openFormBtn">Kê đơn thuốc</button>
+        </header>
+
+        <div id="donThuocForm" class="form-container">
+            <span class="close-btn" id="closeFormBtn">&times;</span>
+            <h2>Thông tin đơn thuốc</h2>
+            <form id="donThuocForm">
+                <label for="ngayKeDon">Ngày kê đơn:</label>
+                <input type="date" id="ngayKeDon" required>
+
+                <label for="tenBenhNhan">Tên bệnh nhân:</label>
+                <input type="text" id="tenBenhNhan" required>
+
+                <label for="danhSachThuoc">Danh sách thuốc (phân cách bằng dấu phẩy):</label>
+                <input type="text" id="danhSachThuoc" required>
+
+                <button type="button" id="submitFormBtn">Thêm đơn thuốc</button>
+            </form>
+        </div>
+
+        <ul id="donThuocList" class="don-thuoc-list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
