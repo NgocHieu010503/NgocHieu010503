@@ -1,4 +1,4 @@
-package com.yourcompany.bundesliga.model;
+package com.Hieucompany.bundesliga.model;
 
 public class Fixture {
     private String home;
