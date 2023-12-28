@@ -1,0 +1,55 @@
+-- Tạo cơ sở dữ liệu
+CREATE DATABASE IF NOT EXISTS football_season_management;
+
+-- Sử dụng cơ sở dữ liệu mới tạo
+USE football_season_management;
+
+-- Tạo bảng cho thông tin đội bóng
+CREATE TABLE IF NOT EXISTS team (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    city VARCHAR(255),
+    coach VARCHAR(255),
+    foundation_year INT
+);
+
+-- Thêm một số dữ liệu mẫu
+INSERT INTO team (name, city, coach, foundation_year) VALUES
+    ('Team 1', 'City 1', 'Coach 1', 2000),
+    ('Team 2', 'City 2', 'Coach 2', 2005),
+    ('Team 3', 'City 3', 'Coach 3', 2010);
+    
+    SELECT * FROM team;
+    
+    -- Tạo cơ sở dữ liệu
+CREATE DATABASE IF NOT EXISTS football_season;
+
+-- Sử dụng cơ sở dữ liệu
+USE football_season;
+
+-- Tạo bảng player
+CREATE TABLE IF NOT EXISTS player (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    age INT,
+    position VARCHAR(255),
+    team_id INT,
+    FOREIGN KEY (team_id) REFERENCES team(id)
+);
+
+-- Thêm dữ liệu vào bảng player
+INSERT INTO player (name, age, position, team_id) VALUES
+('Player 1', 25, 'Forward', 1),
+('Player 2', 28, 'Midfielder', 1),
+('Player 3', 22, 'Defender', 2),
+('Player 4', 30, 'Goalkeeper', 2),
+('Player 5', 27, 'Midfielder', 3);
+
+-- Thêm khóa ngoại từ bảng player đến bảng team
+ALTER TABLE player
+ADD CONSTRAINT fk_team
+FOREIGN KEY (team_id)
+REFERENCES team(id);
+
+-- Xem dữ liệu trong bảng player
+SELECT * FROM player;
