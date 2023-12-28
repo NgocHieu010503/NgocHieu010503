@@ -1,4 +1,4 @@
-package com.yourcompany.bundesliga.dao;
+package com.Hieucompany.bundesliga.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.yourcompany.bundesliga.model.Fixture;
-import com.yourcompany.bundesliga.util.DBUtil;
+import com.Hieucompany.bundesliga.model.Fixture;
+import com.Hieucompany.bundesliga.util.DBUtil;
 
 public class BundesligaDAO {
     private Connection connection;
