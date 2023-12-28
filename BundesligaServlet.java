@@ -1,4 +1,4 @@
-package com.yourcompany.bundesliga.controller;
+package com.Hieucompany.bundesliga.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.yourcompany.bundesliga.dao.BundesligaDAO;
-import com.yourcompany.bundesliga.model.Fixture;
+import com.Hieucompany.bundesliga.dao.BundesligaDAO;
+import com.Hieucompany.bundesliga.model.Fixture;
 
 @WebServlet("/bundesliga")
 public class BundesligaServlet extends HttpServlet {
